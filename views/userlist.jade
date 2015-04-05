@@ -1,0 +1,16 @@
+extends layout
+
+script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+block content
+    h1= user
+
+    form#formAddUser(name="edit",method="post",action="/edit")
+        button#btnSubmit(type="submit") new blog
+    ul
+        each blog, i in userlist
+            li
+               form#formAddUser(name="edit",method="post",action="/edit")
+                 h1#title(name="titl")= blog.title
+                 p#content(name="cont")= blog.content
+                 h3(name="user")= blog.username
+                 button#btnSubmit(type="submit") edit

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div
+        form#formAddUser(name="logged",method="post",action="/logged")
+            input#inputUserName(type="text", placeholder="username", name="username")
+            input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+            button#loggedn(type="submit") login
+        form#formAddUser(name="registrate",method="post",action="/registrate")
+            button#btnSubmit(type="submit") sign up
+    ul
+         each blog, i in index
+            li
+              h1= blog.title
+              p= blog.content
+              h3= blog.username

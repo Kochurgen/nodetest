@@ -1,0 +1,6 @@
+extends layout
+block content
+    form#formAddUser(name="postarticle",method="post",action="/postarticle")
+        input#inputTitle(type="text", placeholder="Title", name="title")
+        textarea#inputContent(type="text",rows=10, placeholder="Content", name="content")
+        button#btnSubmit(type="submit") post
